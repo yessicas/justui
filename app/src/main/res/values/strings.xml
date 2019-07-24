@@ -1,0 +1,110 @@
+<resources>
+    <string name="app_name">DiTenun</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_add_photo">Tambah Foto</string>
+    <string name="title_collection">Koleksi</string>
+    <string name="title_search">Search</string>
+    <string name="title_info">Information</string>
+    <string name="title_help">Bantuan</string>
+    <string name="title_about">Tentang</string>
+    <string name="select_image">Pilih Gambar</string>
+    <string name="take_picture">TAKE PHOTO</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="permission_message">You must grant permission to access camera and external storage to run this application.</string>
+    <string name="permission_warning">All permissions are required.</string>
+
+    <string name="nama_ulos1">Ulos Bintang Maratur</string>
+    <string name="nama_ulos2">Bintang Maratur</string>
+
+
+    <string name="detail_ulos1">Adalah ulos yang diberikan kepada cucu pertama dari anak laki-laki tertua.
+                                Ulos ini disebut sebagai Ulos Panggoaran, yaitu penandaan bahawa nama
+                                cucu akan digunakan sebagai nama orang tua dan kakek-neneknya.</string>
+
+    <string name="buttondesc1">Hasilkan Motif Baru</string>
+    <string name="jenis_motif">Motif Asli</string>
+    <string-array name="android_dropdown_arrays">
+        <item>Hasilkan Motif Baru</item>
+        <item>Model 1</item>
+        <item>Model 2</item>
+        <item>Model 3</item>
+    </string-array>
+
+    <string name="buttongenerate">Generate</string>
+    <string name="tvLoadGenerate">Menghasilkan Motif Baru</string>
+
+    <string name="buttondesc2">Hasilkan Kristik</string>
+    <string name="btnKristik">Hasilkan Kristik</string>
+    <string name="btnSimpanKristik">Simpan</string>
+
+    <string name="tvFrKristik">Motif Baru</string>
+    <string name="btn_Simpan">Simpan</string>
+    <string name="tvSaveKristik">Menyimpan Motif Baru</string>
+
+    <!--Menu Tentang-->
+    <string name="sejarahditenun">Sejarah DiTenun</string>
+    <string name="pengertianditenun">Apa itu DiTenun?</string>
+    <string name="shortdetailditenun">Aplikasi mobile DiTenun merupakan piranti cerdas penghasil
+        aneka ragam motif tenun Nusantara secara otomatis dan cepat. Selain menghaislkan
+        motif juga dapat membuat lembar kerja kristik yang memudahkan penenun untuk bekerja.
+        Saat ini DiTenun fokus pada Tenun Ulos[...]</string>
+    <string name="detailditenun1">Aplikasi mobile DiTenun merupakan piranti cerdas penghasil
+        aneka ragam motif tenun Nusantara secara otomatis dan cepat. Selain menghaislkan
+        motif juga dapat membuat lembar kerja kristik yang memudahkan penenun untuk bekerja.
+        Saat ini DiTenun fokus pada Tenun Ulos.
+    </string>
+    <string name="detailditenun2">Website DiTenun dapat diakses di ditenun.com.
+        Website ini berfungsi untuk membuat motif baru, membuat lenbar kristik tenun, dan
+        menjual produk turunan Ulos. Selain itu fungsi utama website adalah untuk
+        mempublikasikan para penenun yang disebut sebagai “Pahlawan Tenun”.</string>
+
+    <string name="shortdeilsejarah">Proyek penelitian yang diawali dengan niat tulus memperkuat
+        industri kecil skala rumahan yang berhubungan dengan budaya melalui penerapan teknologi
+        ini telah berlangsung selama dua tahun. Digawangi oleh Dr. Arlinta Barus sebagai ketua
+        periset, yang menjabat sebagai Wakil Rektor[...]</string>
+    <string name="detailsejarah1"> Proyek penelitian yang diawali dengan niat tulus memperkuat
+        industri kecil skala rumahan yang berhubungan dengan budaya melalui penerapan teknologi
+        ini telah berlangsung selama dua tahun. Digawangi oleh Dr. Arlinta Barus sebagai ketua
+        periset, yang menjabat sebagai Wakil Rektor Bidang Akademik dan Kemahasiswaan di
+        Institut Teknologi Del ini, memiliki keinginan kuat untuk menciptakan inovasi yang
+        bermanfaat langsung bagi masyarakat sekitar kampus IT Del. Tim Periset bersinergi dengan
+        Piksel Indonesia sebagai pencipta Batik Fractal yang dipimpin oleh Nancy Margried, M.Sc.
+        Keduanya lantas memutuskan untuk menciptakan aplikasi teknologi seluler untuk kain
+        tenun nusantara. Sebagai proyek percontohan, aplikasi seluler ini akan diterapkan untuk
+        memperkuat kemampuan penenun Ulos di empat kabupaten sekitar IT Del; yaitu Toba Samosir,
+        Humbang Hasundutan, Tapanuli Utara, dan Samosir.
+    </string>
+
+    <string name="detailsejarah2">Pada 12 Desember 2018 di Sitoluama telah sukses dilakukan soft launching aplikasi dan
+        website DiTenun yang dihadiri oleh Rektor Institut Teknologi Del yaitu Prof.Ir. Togar M.
+        Simatupang, M.Tech., Ph.D., Bapak Patuan Simatupang, 9 orang penenun dari Kabupaten
+        Humbang Hasundutan, dan 7 orang penenun dari Kabupaten Silaen.
+    </string>
+
+    <string name="detailsejarah3">Pengembangan aplikasi dan website DiTenun masih gencar dan penuh semangat dilakukan
+        oleh Tim DiTenun yang dimpin oleh r. Arlinta Christy Barus, ST., M.InfoTech. DiTenun ini
+        merupakan sebuah riset inovasi yang didanai oleh Lembaga Pengelola Dana Pendidikan (LPDP)
+        Kementerian Keuangan Republik Indonesia ke Institut Teknologi Del.</string>
+
+    <!--Menu masukan-->
+    <string name="cara_generate">Cara Menghasilkan Motif Baru</string>
+    <string name="penjelasan_cara_generate">Untuk menghasilkan motif baru pada Aplikasi DiTenun, Anda dapat mengikuti instruksi berikut:</string>
+    <string name="caragenerate1"></string>
+    <string name="caragenerate2"></string>
+    <string name="caragenerate3"></string>
+    <string name="caragenerate4"></string>
+
+
+    <string name="cara_kristik">Cara Menghasilkan Kristik Baru</string>
+    <string name="penjelasan_cara_kristik">Untuk menghasilkan kristik baru pada Aplikasi DiTenun, Anda dapat mengikuti instruksi berikut:</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_collection">CollectionActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+</resources>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.GenerateMotifActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="6dp"
+            android:contentDescription="@string/nama_ulos1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/bintangmaratur" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="17dp"
+            android:background="@color/white"
+            android:fontFamily="@font/roboto_black"
+            android:lineSpacingExtra="2sp"
+            android:text="@string/jenis_motif"
+            android:textColor="@color/colorNavText"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/buttongenerate"
+            android:layout_alignBottom="@+id/buttongenerate"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="14dp"
+            android:backgroundTint="#2ecc71"
+            android:entries="@array/android_dropdown_arrays"
+            android:padding="5dp" />
+
+        <Button
+            android:id="@+id/buttongenerate"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="380dp"
+            android:layout_marginEnd="16dp"
+            android:background="#5975FF"
+            android:text="@string/buttongenerate"
+            android:textColor="@color/cardview_light_background" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/resultgenerate"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/textViewHasil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="18dp"
+            android:text="Hasil Generate" />
+
+        <com.jsibbold.zoomage.ZoomageView
+            android:id="@+id/imageViewGenerate"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/textViewHasil"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="@string/nama_ulos1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/generatebintangmaratur"
+            app:zoomage_restrictBounds="false"
+            app:zoomage_animateOnReset="true"
+            app:zoomage_autoResetMode="UNDER"
+            app:zoomage_autoCenter="true"
+            app:zoomage_zoomable="true"
+            app:zoomage_translatable="true"
+            app:zoomage_minScale="0.6"
+            app:zoomage_maxScale="8" />
+
+        <Button
+            android:id="@+id/btnSimpanGenerate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewGenerate"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_centerHorizontal="true"
+            android:background="#5975FF"
+            android:text="Simpan"
+            android:textColor="@color/cardview_light_background" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+
