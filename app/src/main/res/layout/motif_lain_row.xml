@@ -8,8 +8,8 @@
     android:layout_marginBottom="5dp"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
-    android:layout_width="180dp"
-    android:layout_height="130dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:background="@drawable/shape">
 
     <LinearLayout
@@ -20,18 +20,24 @@
         <ImageView
             android:id="@+id/ivImage"
             android:scaleType="centerCrop"
-            android:src="@drawable/harungguan"
-            android:layout_width="180dp"
-            android:layout_height="100dp" />
+            android:src="@drawable/bintangmaratur_potrait"
+            android:layout_width="wrap_content"
+            android:layout_height="210dp" />
 
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="3dp"
+            android:autoSizeMaxTextSize="100sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeStepGranularity="2sp"
+            android:autoSizeTextType="uniform"
             android:fontFamily="sans-serif-condensed"
-            android:text="Tenun"
-            android:layout_margin="3dp"
-            android:textSize="16dp" />
+            android:textColor="@color/colorNavText"
+            android:text="Tenun" />
 
     </LinearLayout>
 

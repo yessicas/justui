@@ -1,6 +1,7 @@
 package com.prototype.ditenun.ditenunuiprototype.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.prototype.ditenun.ditenunuiprototype.R;
+import com.prototype.ditenun.ditenunuiprototype.activity.MoreActivity;
 import com.prototype.ditenun.ditenunuiprototype.adapter.HorizontalAdapter;
 import com.prototype.ditenun.ditenunuiprototype.model.Ulos;
 
@@ -56,11 +58,11 @@ public class HomeFragment extends Fragment {
         data3 = fill_with_data3();
         data4 = fill_with_data4();
 
-        horizontalAdapter = new HorizontalAdapter(data, getContext());
-        horizontalAdapter1 = new HorizontalAdapter(data1, getContext());
-        horizontalAdapter2 = new HorizontalAdapter(data2, getContext());
-        horizontalAdapter3 = new HorizontalAdapter(data3, getContext());
-        horizontalAdapter4 = new HorizontalAdapter(data4, getContext());
+        horizontalAdapter = new HorizontalAdapter(data, getContext(), "Sumatera");
+        horizontalAdapter1 = new HorizontalAdapter(data1, getContext(), "Nusa Tenggara Timur");
+        horizontalAdapter2 = new HorizontalAdapter(data2, getContext(), "Toraja");
+        horizontalAdapter3 = new HorizontalAdapter(data3, getContext(), "Bali");
+        horizontalAdapter4 = new HorizontalAdapter(data4, getContext(), "Papua");
 
         LinearLayoutManager horizontalLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
         LinearLayoutManager horizontalLayoutManager1 = new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false);
@@ -79,6 +81,28 @@ public class HomeFragment extends Fragment {
         horizontal_recycler_view4.setAdapter(horizontalAdapter4);
 
         return rootView;
+    }
+
+    public void onClick(View v){
+        Intent intent = new Intent(v.getContext(), MoreActivity.class);
+        switch(v.getId()) {
+            case R.id.sumatera_lainnya:
+                intent.putExtra("daerah", "Sumatera");
+                break;
+            case R.id.ntt_lainnya:
+                intent.putExtra("daerah", "Nusa Tenggara Timur");
+                break;
+            case R.id.toraja_lainnya:
+                intent.putExtra("daerah", "Toraja");
+                break;
+            case R.id.bali_lainnya:
+                intent.putExtra("daerah", "Bali");
+                break;
+            case R.id.papua_lainnya:
+                intent.putExtra("daerah", "Papua");
+                break;
+        }
+        startActivity(intent);
     }
 
     public List<Ulos> fill_with_data() {
