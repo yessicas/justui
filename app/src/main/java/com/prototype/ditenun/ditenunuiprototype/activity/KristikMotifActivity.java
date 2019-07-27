@@ -25,11 +25,11 @@ public class KristikMotifActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kristik_motif);
 
-        relativeLayout = findViewById(R.id.hasilKristik);
+        relativeLayout = findViewById(R.id.resultgenerate);
         relativeLayout.setVisibility(View.INVISIBLE);
 
         viewDialogKristik = new ViewDialogKristik(this);
-        mButton = findViewById(R.id.btnSimpanKristik);
+        mButton = findViewById(R.id.btnSimpanGenerate);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
