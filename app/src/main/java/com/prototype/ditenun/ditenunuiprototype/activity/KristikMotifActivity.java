@@ -1,6 +1,5 @@
 package com.prototype.ditenun.ditenunuiprototype.activity;
 
-import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
@@ -13,12 +12,12 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.prototype.ditenun.ditenunuiprototype.R;
-import com.prototype.ditenun.ditenunuiprototype.Utility.ViewDialog;
+import com.prototype.ditenun.ditenunuiprototype.Utility.ViewDialogKristik;
 
 public class KristikMotifActivity extends AppCompatActivity {
 
     RelativeLayout relativeLayout;
-    ViewDialog viewDialog;
+    ViewDialogKristik viewDialogKristik;
     Button mButton;
 
     @Override
@@ -29,7 +28,7 @@ public class KristikMotifActivity extends AppCompatActivity {
         relativeLayout = findViewById(R.id.hasilKristik);
         relativeLayout.setVisibility(View.INVISIBLE);
 
-        viewDialog = new ViewDialog(this);
+        viewDialogKristik = new ViewDialogKristik(this);
         mButton = findViewById(R.id.btnSimpanKristik);
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,13 +62,13 @@ public class KristikMotifActivity extends AppCompatActivity {
             public void onClick(View arg0) {
 
                 // TODO Auto-generated method stub
-                viewDialog.showDialog();
+                viewDialogKristik.showDialog();
 
                 Handler handler = null;
                 handler = new Handler();
                 handler.postDelayed(new Runnable(){
                     public void run(){
-                        viewDialog.hideDialog();
+                        viewDialogKristik.hideDialog();
                         relativeLayout.setVisibility(View.VISIBLE);
                     }
                 }, 7000);

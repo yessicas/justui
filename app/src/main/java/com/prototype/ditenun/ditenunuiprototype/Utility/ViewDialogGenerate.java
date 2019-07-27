@@ -2,6 +2,8 @@ package com.prototype.ditenun.ditenunuiprototype.Utility;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.Window;
 import android.widget.ImageView;
 
@@ -9,13 +11,13 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
 import com.prototype.ditenun.ditenunuiprototype.R;
 
-
-public class ViewDialog {
+public class ViewDialogGenerate {
 
     Activity activity;
     Dialog dialog;
     //..we need the context else we can not create the dialog so get context in constructor
-    public ViewDialog(Activity activity) {
+
+    public ViewDialogGenerate(Activity activity) {
         this.activity = activity;
     }
 
@@ -26,7 +28,7 @@ public class ViewDialog {
         //...set cancelable false so that it's never get hidden
         dialog.setCancelable(false);
         //...that's the layout i told you will inflate later
-        dialog.setContentView(R.layout.dialog_layout_loading);
+        dialog.setContentView(R.layout.dialog_layout_loading_generate);
 
         //...initialize the imageView form infalted layout
         ImageView gifImageView = dialog.findViewById(R.id.custom_loading_imageView);
@@ -50,9 +52,11 @@ public class ViewDialog {
         dialog.show();
     }
 
+
     //..also create a method which will hide the dialog when some work is done
     public void hideDialog(){
         dialog.dismiss();
     }
 
 }
+

@@ -71,7 +71,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            android:weightSum="2">
 
             <Button
                 android:id="@+id/button1"
@@ -79,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:padding="5dp"
                 android:layout_margin="5dp"
-                android:background="@drawable/shape"
+                android:background="@drawable/bgbtnhasilkanmotif"
                 android:backgroundTint="@color/cardview_light_background"
                 android:text="@string/buttondesc1"
                 android:textColor="@color/colorAccent" />
@@ -90,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:padding="5dp"
-                android:background="@color/colorAccent"
+                android:background="@drawable/bgbtnhasilkankristik"
                 android:text="@string/buttondesc2"
                 android:textColor="@color/cardview_light_background" />
 

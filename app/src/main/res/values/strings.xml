@@ -89,15 +89,19 @@
     <!--Menu masukan-->
     <string name="cara_generate">Cara Menghasilkan Motif Baru</string>
     <string name="penjelasan_cara_generate">Untuk menghasilkan motif baru pada Aplikasi DiTenun, Anda dapat mengikuti instruksi berikut:</string>
-    <string name="caragenerate1"></string>
-    <string name="caragenerate2"></string>
-    <string name="caragenerate3"></string>
-    <string name="caragenerate4"></string>
+    <string name="caragenerate1">1. Pilih motif tenun</string>
+    <string name="caragenerate2">2. Pilih menu Hasilkan Motif Baru</string>
+    <string name="caragenerate3">3. Pilih model yang tersedia lalu tekan tombol generate</string>
+    <string name="caragenerate4">4. Setelah hasil motif baru ditampilkan, tekan Simpan</string>
 
 
     <string name="cara_kristik">Cara Menghasilkan Kristik Baru</string>
     <string name="penjelasan_cara_kristik">Untuk menghasilkan kristik baru pada Aplikasi DiTenun, Anda dapat mengikuti instruksi berikut:</string>
 
+    <string name="carakristik1">1. Pilih motif tenun</string>
+    <string name="carakristik2">2. Pilih menu Hasilkan Kristik</string>
+    <string name="carakristik3">3. Pilih ukuran dan warna yang tersedia lalu tekan tombol generate</string>
+    <string name="carakristik4">4. Setelah hasil kristik ditampilkan, tekan Simpan</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

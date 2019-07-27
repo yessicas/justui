@@ -17,8 +17,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_black"
-            android:text="Cara menghasilkan motif baru"
-            android:textSize="18dp" />
+            android:text="@string/cara_generate"
+            android:lineSpacingExtra="2sp"
+            android:textSize="20dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="
+
+            "/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -26,9 +33,54 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_gravity="center_vertical|right"
-            android:lineSpacingExtra="2sp"
-            android:text="@string/pengertianditenun"
+            android:text="@string/penjelasan_cara_generate"
             android:textSize="18sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical|left"
+            android:lineSpacingExtra="2sp"
+            android:text="@string/caragenerate1"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical|left"
+            android:lineSpacingExtra="1sp"
+            android:text="@string/caragenerate2"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical|left"
+            android:lineSpacingExtra="1sp"
+            android:text="@string/caragenerate3"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical|left"
+            android:lineSpacingExtra="1sp"
+            android:text="@string/caragenerate4"
+            android:textSize="18sp" />
+
+
     </LinearLayout>
 
 </ScrollView>

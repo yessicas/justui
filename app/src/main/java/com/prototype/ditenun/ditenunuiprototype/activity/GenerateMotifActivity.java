@@ -14,11 +14,11 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
 import com.prototype.ditenun.ditenunuiprototype.R;
-import com.prototype.ditenun.ditenunuiprototype.Utility.ViewDialog;
+import com.prototype.ditenun.ditenunuiprototype.Utility.ViewDialogGenerate;
 
 public class GenerateMotifActivity extends AppCompatActivity {
 
-    ViewDialog viewDialog;
+    ViewDialogGenerate viewDialogGenerate;
     Button mButton;
 
     Spinner spinner;
@@ -39,7 +39,7 @@ public class GenerateMotifActivity extends AppCompatActivity {
         spinner = (Spinner)findViewById(R.id.spinner1);
         adapter = new ArrayAdapter<String>(this, android. R.layout.simple_list_item_1, names);
 
-        viewDialog = new ViewDialog(this);
+        viewDialogGenerate = new ViewDialogGenerate(this);
         mButton = findViewById(R.id.btnSimpanGenerate);
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(GenerateMotifActivity.this);
@@ -82,13 +82,13 @@ public class GenerateMotifActivity extends AppCompatActivity {
             public void onClick(View arg0) {
 
                 // TODO Auto-generated method stub
-                viewDialog.showDialog();
+                viewDialogGenerate.showDialog();
 
                 Handler handler = null;
                 handler = new Handler();
                 handler.postDelayed(new Runnable(){
                     public void run(){
-                        viewDialog.hideDialog();
+                        viewDialogGenerate.hideDialog();
                         relativeLayout.setVisibility(View.VISIBLE);
                     }
                 }, 5000);
