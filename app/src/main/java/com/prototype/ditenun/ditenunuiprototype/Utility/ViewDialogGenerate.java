@@ -15,6 +15,7 @@ public class ViewDialogGenerate {
 
     Activity activity;
     Dialog dialog;
+    String selected = "";
     //..we need the context else we can not create the dialog so get context in constructor
 
     public ViewDialogGenerate(Activity activity) {
@@ -52,6 +53,13 @@ public class ViewDialogGenerate {
         dialog.show();
     }
 
+    public String getSelected(){
+        return selected;
+    }
+
+    public void setSelected(String selected){
+        this.selected = selected;
+    }
 
     //..also create a method which will hide the dialog when some work is done
     public void hideDialog(){

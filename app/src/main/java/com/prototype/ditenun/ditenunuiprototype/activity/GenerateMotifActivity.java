@@ -2,6 +2,7 @@ package com.prototype.ditenun.ditenunuiprototype.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -37,6 +38,9 @@ public class GenerateMotifActivity extends AppCompatActivity {
         relativeLayout = findViewById(R.id.resultgenerate);
         relativeLayout.setVisibility(View.INVISIBLE);
         spinner = (Spinner)findViewById(R.id.spinner1);
+        Button buttongenerate = (Button) findViewById(R.id.buttongenerate);
+        buttongenerate.setBackground(getDrawable(R.drawable.bgbtntask_disabled));
+        buttongenerate.setEnabled(false);
         adapter = new ArrayAdapter<String>(this, android. R.layout.simple_list_item_1, names);
 
         viewDialogGenerate = new ViewDialogGenerate(this);
@@ -65,7 +69,15 @@ public class GenerateMotifActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
+                Button buttongenerate = (Button) findViewById(R.id.buttongenerate);
+                String selected = spinner.getSelectedItem().toString();
+                if(selected.equals("Pilih Model") || selected.equals(viewDialogGenerate.getSelected())){
+                    buttongenerate.setBackground(getDrawable(R.drawable.bgbtntask_disabled));
+                    buttongenerate.setEnabled(false);
+                }else{
+                    buttongenerate.setBackground(getDrawable(R.drawable.bgbtntask));
+                    buttongenerate.setEnabled(true);
+                }
             }
 
 
@@ -74,8 +86,6 @@ public class GenerateMotifActivity extends AppCompatActivity {
 
             }
         });
-
-        Button buttongenerate = (Button) findViewById(R.id.buttongenerate);
         buttongenerate.setOnClickListener(new View.OnClickListener() {
 
 
@@ -88,8 +98,12 @@ public class GenerateMotifActivity extends AppCompatActivity {
                 handler = new Handler();
                 handler.postDelayed(new Runnable(){
                     public void run(){
+                        Button buttongenerate = (Button) findViewById(R.id.buttongenerate);
                         viewDialogGenerate.hideDialog();
                         relativeLayout.setVisibility(View.VISIBLE);
+                        viewDialogGenerate.setSelected(spinner.getSelectedItem().toString());
+                        buttongenerate.setBackground(getDrawable(R.drawable.bgbtntask_disabled));
+                        buttongenerate.setEnabled(false);
                     }
                 }, 5000);
 

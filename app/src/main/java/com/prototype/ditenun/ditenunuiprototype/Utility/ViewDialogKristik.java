@@ -55,4 +55,8 @@ public class ViewDialogKristik {
         dialog.dismiss();
     }
 
+    public Boolean checkDialog(){
+        return dialog.isShowing();
+    }
+
 }

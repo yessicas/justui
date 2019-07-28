@@ -1,134 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical"
-    android:backgroundTint="#F8F8F8"
-    tools:context=".activity.GenerateMotifActivity">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp">
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:contentDescription="@string/nama_ulos1"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/bintangmaratur" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="10dp"
-            android:padding="4dp"
-            android:background="#ffffff"
-            android:fontFamily="@font/roboto_black"
-            android:text="@string/jenis_motif"
-            android:textColor="@color/colorNavText"
-            android:textSize="16sp" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
-
-        <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="180dp"
-            android:layout_height="32dp"
-            android:layout_alignBaseline="@+id/buttongenerate"
-            android:layout_alignBottom="@+id/buttongenerate"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="200dp"
-            android:background="@drawable/btnspinner"
-            android:entries="@array/android_dropdown_arrays"
-            android:padding="6dp"
-            android:spinnerMode="dropdown"
-            android:theme="@style/Spinner" />
-
-        <Button
-            android:id="@+id/buttongenerate"
-            android:layout_width="145dp"
-            android:layout_height="32dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginBottom="380dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/bgbtntask"
-            android:text="@string/buttongenerate"
-            android:textColor="@color/cardview_light_background" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/resultgenerate"
-        android:layout_width="410dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="15dp">
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:backgroundTint="#F8F8F8"
+        tools:context=".activity.GenerateMotifActivity">
 
-        <TextView
-            android:id="@+id/textViewHasil"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/roboto_black"
-            android:text="Motif Baru"
-            android:textColor="@color/colorNavText"
-            android:textSize="16sp" />
-
-        <ImageView
-            android:id="@+id/imageViewGenerate"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:layout_below="@+id/textViewHasil"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:contentDescription="@string/nama_ulos1"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
             android:layout_marginStart="16dp"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/generatebintangmaratur" />
+            android:layout_marginEnd="16dp">
 
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:contentDescription="@string/nama_ulos1"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/bintangmaratur" />
 
-        <Button
-            android:id="@+id/btnSimpanGenerate"
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:background="#ffffff"
+                android:fontFamily="@font/roboto_black"
+                android:text="@string/jenis_motif"
+                android:textColor="@color/colorNavText"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="180dp"
+                android:layout_height="32dp"
+                android:layout_alignBaseline="@+id/buttongenerate"
+                android:layout_alignBottom="@+id/buttongenerate"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="200dp"
+                android:background="@drawable/btnspinner"
+                android:entries="@array/android_dropdown_arrays"
+                android:padding="6dp"
+                android:spinnerMode="dropdown"
+                android:theme="@style/Spinner" />
+
+            <Button
+                android:id="@+id/buttongenerate"
+                android:layout_width="145dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="380dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bgbtntask"
+                android:text="@string/buttongenerate"
+                android:textColor="@color/cardview_light_background" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/resultgenerate"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:layout_below="@+id/imageViewGenerate"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="16dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp"
             android:layout_marginStart="16dp"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/bgbtntask"
-            android:text="Simpan"
-            android:textColor="@color/cardview_light_background" />
+            android:layout_marginEnd="16dp">
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/textViewHasil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:fontFamily="@font/roboto_black"
+                android:text="Motif Baru"
+                android:textColor="@color/colorNavText"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageViewGenerate"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@+id/textViewHasil"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:contentDescription="@string/nama_ulos1"
+                android:layout_marginTop="35dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/generatebintangmaratur" />
 
 
-</LinearLayout>
+            <Button
+                android:id="@+id/btnSimpanGenerate"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_below="@+id/imageViewGenerate"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bgbtntask"
+                android:text="Simpan"
+                android:textColor="@color/cardview_light_background" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
 

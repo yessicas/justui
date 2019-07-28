@@ -2,6 +2,7 @@ package com.prototype.ditenun.ditenunuiprototype.activity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -55,7 +56,7 @@ public class KristikMotifActivity extends AppCompatActivity {
             }
         });
 
-        Button buttongenerate = (Button) findViewById(R.id.btnKristik);
+        final Button buttongenerate = (Button) findViewById(R.id.btnKristik);
         buttongenerate.setOnClickListener(new View.OnClickListener() {
 
 
@@ -73,6 +74,10 @@ public class KristikMotifActivity extends AppCompatActivity {
                     }
                 }, 7000);
 
+                if(viewDialogKristik.checkDialog()){
+                    buttongenerate.setBackground(getDrawable(R.drawable.bgbtntask_disabled));;
+                    buttongenerate.setEnabled(false);
+                }
             }
         });
 
