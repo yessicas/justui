@@ -28,7 +28,8 @@
                     android:textSize="20dp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/sumatera_lainnya"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -37,6 +38,8 @@
                     android:fontFamily="sans-serif"
                     android:gravity="right"
                     android:text="Lihat motif lainnya"
+                    android:onClick="onClick"
+                    android:clickable="true"
                     android:textColor="#0082CD"
                     android:textSize="10dp"
                     android:textStyle="bold"/>
@@ -69,7 +72,8 @@
                     android:textSize="20dp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/ntt_lainnya"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -77,7 +81,9 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="sans-serif"
                     android:gravity="right"
-                    android:text="Lihat motif lainnya"
+                    android:text="lihat motif lainnya"
+                    android:onClick="onClick"
+                    android:clickable="true"
                     android:textColor="#0082CD"
                     android:textSize="10dp"
                     android:textStyle="bold"/>
@@ -107,7 +113,8 @@
                     android:textSize="20dp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toraja_lainnya"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -115,7 +122,9 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="sans-serif"
                     android:gravity="right"
-                    android:text="Lihat motif lainnya"
+                    android:text="lihat motif lainnya"
+                    android:onClick="onClick"
+                    android:clickable="true"
                     android:textColor="#0082CD"
                     android:textSize="10dp"
                     android:textStyle="bold"/>
@@ -146,7 +155,8 @@
                     android:textSize="20dp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/bali_lainnya"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -154,7 +164,9 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="sans-serif"
                     android:gravity="right"
-                    android:text="Lihat motif lainnya"
+                    android:text="lihat motif lainnya"
+                    android:onClick="onClick"
+                    android:clickable="true"
                     android:textColor="#0082CD"
                     android:textSize="10dp"
                     android:textStyle="bold"/>
@@ -185,7 +197,8 @@
                     android:textSize="20dp"
                     android:textStyle="bold"/>
 
-                <TextView
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/papua_lainnya"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -193,7 +206,9 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="sans-serif"
                     android:gravity="right"
-                    android:text="Lihat motif lainnya"
+                    android:text="lihat motif lainnya"
+                    android:onClick="onClick"
+                    android:clickable="true"
                     android:textColor="#0082CD"
                     android:textSize="10dp"
                     android:textStyle="bold"/>

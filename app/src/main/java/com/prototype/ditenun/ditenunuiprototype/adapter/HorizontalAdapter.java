@@ -24,11 +24,13 @@ public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.My
 
     List<Ulos> horizontalList = Collections.emptyList();
     Context mContext;
+    String daerah;
 
 
-    public HorizontalAdapter(List<Ulos> horizontalList, Context mContext) {
+    public HorizontalAdapter(List<Ulos> horizontalList, Context mContext, String daerah) {
         this.horizontalList = horizontalList;
         this.mContext = mContext;
+        this.daerah = daerah;
     }
 
 
@@ -64,6 +66,7 @@ public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.My
 
                 if(position == 3){
                     Intent intent = new Intent(mContext, MoreActivity.class);
+                    intent.putExtra("daerah", daerah);
                     mContext.startActivity(intent);
                 } else {
                     Intent intent = new Intent(mContext, DescTenunActivity.class);

@@ -10,6 +10,7 @@ import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.prototype.ditenun.ditenunuiprototype.R;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
+        navigation.setSelectedItemId(R.id.navigation_home);
     }
 
 
@@ -108,5 +110,27 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         }
 
         return true;
+    }
+
+    public void onClick(View v){
+        Intent intent = new Intent(v.getContext(), MoreActivity.class);
+        switch(v.getId()) {
+            case R.id.sumatera_lainnya:
+                intent.putExtra("daerah", "Sumatera");
+                break;
+            case R.id.ntt_lainnya:
+                intent.putExtra("daerah", "Nusa Tenggara Timur");
+                break;
+            case R.id.toraja_lainnya:
+                intent.putExtra("daerah", "Toraja");
+                break;
+            case R.id.bali_lainnya:
+                intent.putExtra("daerah", "Bali");
+                break;
+            case R.id.papua_lainnya:
+                intent.putExtra("daerah", "Papua");
+                break;
+        }
+        startActivity(intent);
     }
 }

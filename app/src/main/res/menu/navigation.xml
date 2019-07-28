@@ -5,17 +5,17 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_home" />
+        android:title="" />
 
     <item
         android:id="@+id/navigation_add_photo"
-        android:icon="@android:drawable/ic_menu_camera"
+        android:icon="@drawable/ic_action_add"
         android:iconTint="@android:color/background_dark"
-        android:title="@string/title_add_photo" />
+        android:title="" />
 
     <item
         android:id="@+id/navigation_collection"
         android:icon="@android:drawable/sym_contact_card"
-        android:title="@string/title_collection" />
+        android:title="" />
 
 </menu>
