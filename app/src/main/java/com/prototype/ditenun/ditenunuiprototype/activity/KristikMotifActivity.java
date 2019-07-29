@@ -32,17 +32,21 @@ public class KristikMotifActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         setContentView(R.layout.activity_kristik_motif);
+        relativeLayout = findViewById(R.id.resultgenerate);
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mToolbar.setTitle("Kristik Motif");
-        mToolbar.setNavigationIcon(R.drawable.ic_action_back);
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        mToolbar.setNavigationIcon(R.drawable.ic_action_back);mToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                finish();
+            public void onClick(View v) {
+                if(relativeLayout.getVisibility() == View.VISIBLE) {
+                    IsFinish("Apakah Anda kembali tanpa menyimpan?");
+                }else{
+                    finish();
+                }
             }
         });
 
-        relativeLayout = findViewById(R.id.resultgenerate);
+
         if(intent.hasExtra("kristik")){
             Button buttongenerate = (Button) findViewById(R.id.btnKristik);
             relativeLayout.setVisibility(View.VISIBLE);
@@ -102,5 +106,30 @@ public class KristikMotifActivity extends AppCompatActivity {
                 dialog.show();
             }
         });
+    }
+
+    public void IsFinish(String alertmessage) {
+
+        final AlertDialog.Builder builder2 = new AlertDialog.Builder(KristikMotifActivity.this);
+        builder2.setCancelable(true);
+        builder2.setMessage(alertmessage);
+        builder2.setPositiveButton("Ya",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent i = new Intent(getApplicationContext(), DescTenunActivity.class);
+                        startActivity(i);
+                    }
+                });
+        builder2.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
+
+        AlertDialog dialog = builder2.create();
+        dialog.show();
+
     }
 }

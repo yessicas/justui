@@ -1,7 +1,9 @@
 package com.prototype.ditenun.ditenunuiprototype.activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -30,10 +32,10 @@ public class PilihKristikActivity extends AppCompatActivity {
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mToolbar.setTitle("Hasilkan Kristik Baru");
         mToolbar.setNavigationIcon(R.drawable.ic_action_back);
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+        mToolbar.setNavigationIcon(R.drawable.ic_action_back);mToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                finish();
+            public void onClick(View v) {
+                IsFinish("Apakah Anda batal membuat kristik baru?");
             }
         });
 
@@ -65,5 +67,30 @@ public class PilihKristikActivity extends AppCompatActivity {
                 }, 3000);
             }
         });
+    }
+
+    public void IsFinish(String alertmessage) {
+
+        final AlertDialog.Builder builder2 = new AlertDialog.Builder(PilihKristikActivity.this);
+        builder2.setCancelable(true);
+        builder2.setMessage(alertmessage);
+        builder2.setPositiveButton("Ya",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent i = new Intent(getApplicationContext(), DescTenunActivity.class);
+                        startActivity(i);
+                    }
+                });
+        builder2.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
+
+        AlertDialog dialog = builder2.create();
+        dialog.show();
+
     }
 }
