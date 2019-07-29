@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.PilihKristikActivity">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:contentDescription="@string/nama_ulos2"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/bintangmaratur" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:background="#ffffff"
+                android:fontFamily="@font/roboto_black"
+                android:text="@string/jenis_motif"
+                android:textColor="@color/colorNavText"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:layout_marginTop="100dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ukuran"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                    android:background="?android:selectableItemBackground"
+                    android:layoutDirection="rtl"
+                    android:textAlignment="textStart"
+                    android:layout_marginLeft="20dp"
+                    android:text="Kecil"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                    android:background="?android:selectableItemBackground"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="start"
+                    android:textAlignment="textStart"
+                    android:layout_marginLeft="20dp"
+                    android:text="Sedang"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                    android:background="?android:selectableItemBackground"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="start"
+                    android:textAlignment="textStart"
+                    android:layout_marginLeft="20dp"
+                    android:text="Besar"
+                    android:textSize="18sp" />
+
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Warna"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                    android:background="?android:selectableItemBackground"
+                    android:layoutDirection="rtl"
+                    android:textAlignment="textStart"
+                    android:layout_marginLeft="20dp"
+                    android:text="Sedikit"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                    android:background="?android:selectableItemBackground"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="start"
+                    android:textAlignment="textStart"
+                    android:layout_marginLeft="20dp"
+                    android:text="Sedang"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableRight="?android:attr/listChoiceIndicatorSingle"
+                    android:background="?android:selectableItemBackground"
+                    android:layoutDirection="rtl"
+                    android:layout_gravity="start"
+                    android:textAlignment="textStart"
+                    android:layout_marginLeft="20dp"
+                    android:text="Banyak"
+                    android:textSize="18sp" />
+                </RadioGroup>
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnKristik"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_below="@+id/imageViewGenerate"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bgbtntask"
+                android:text="Kristik"
+                android:textColor="@color/cardview_light_background" />
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
