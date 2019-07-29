@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -64,6 +65,10 @@ public class GalleryActivity extends AppCompatActivity implements ActionBar.OnNa
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.closemenu, menu);
+
         return true;
     }
 
@@ -72,6 +77,11 @@ public class GalleryActivity extends AppCompatActivity implements ActionBar.OnNa
      * */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==R.id.menu_close){
+            onBackPressed();
+            return true;
+        }
+
         return true;
     }
 

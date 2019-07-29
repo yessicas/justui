@@ -18,10 +18,6 @@ import com.prototype.ditenun.ditenunuiprototype.fragment.HomeFragment;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-    private TextView mTextMessage;
-    private static final int REQUEST_ID_IMAGE_CAPTURE = 100;
-    private static final int REQUEST_ID_PICK_GALERY = 101;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +27,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         loadFragment(new HomeFragment());
 
         //getting bottom navigation view and attaching the listener
-        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
         navigation.setSelectedItemId(R.id.navigation_home);
@@ -72,21 +67,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.optionmenu, menu);
 
-        MenuItem searchItem = menu.findItem(R.id.menu_search);
-        SearchView searchView = (SearchView) searchItem.getActionView();
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
-            }
-        });
-
         return true;
     }
 
@@ -105,10 +85,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         } else if (item.getItemId() == R.id.menu_bantuan) {
             startActivity(new Intent(this, HelpActivity.class));
             return true;
-        }  else if (item.getItemId() == R.id.menu_search) {
-            return true;
         }
-
         return true;
     }
 
