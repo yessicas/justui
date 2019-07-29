@@ -19,21 +19,19 @@
         app:title="Kristik Motif"
         android:theme="@style/ThemeOverlay.AppCompat.Dark" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
+        <android.support.constraint.ConstraintLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
             <RelativeLayout
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/upperImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp">
+                android:layout_margin="16dp">
 
                 <ImageView
                     android:id="@+id/imageView4"
@@ -63,6 +61,10 @@
             </RelativeLayout>
 
             <RelativeLayout
+                app:layout_constraintTop_toBottomOf="@id/upperImage"
+                android:id="@+id/buttonSecond"
+                android:layout_alignBottom="@id/upperImage"
+                android:layout_alignTop="@id/resultgenerate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -81,9 +83,9 @@
 
             </RelativeLayout>
 
-
             <RelativeLayout
                 android:id="@+id/resultgenerate"
+                app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
@@ -128,8 +130,5 @@
 
             </RelativeLayout>
 
-
-
-        </LinearLayout>
-    </ScrollView>
+        </android.support.constraint.ConstraintLayout>
 </LinearLayout>

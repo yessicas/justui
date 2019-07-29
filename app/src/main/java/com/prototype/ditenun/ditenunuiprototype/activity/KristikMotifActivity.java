@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -18,6 +19,9 @@ import com.prototype.ditenun.ditenunuiprototype.Utility.ViewDialogKristik;
 
 public class KristikMotifActivity extends AppCompatActivity {
 
+    private RadioButton radioButton1,radioButton2, radioButton3, radioButton4, radioButton5, radioButton6;
+    private Button kristik;
+
     RelativeLayout relativeLayout;
     ViewDialogKristik viewDialogKristik;
     Button mButton;
@@ -25,6 +29,8 @@ public class KristikMotifActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent intent = getIntent();
+
         setContentView(R.layout.activity_kristik_motif);
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mToolbar.setTitle("Kristik Motif");
@@ -37,7 +43,15 @@ public class KristikMotifActivity extends AppCompatActivity {
         });
 
         relativeLayout = findViewById(R.id.resultgenerate);
-        relativeLayout.setVisibility(View.INVISIBLE);
+        if(intent.hasExtra("kristik")){
+            Button buttongenerate = (Button) findViewById(R.id.btnKristik);
+            relativeLayout.setVisibility(View.VISIBLE);
+            buttongenerate.setBackground(getDrawable(R.drawable.bgbtntask_disabled));;
+            buttongenerate.setEnabled(false);
+        }else{
+            relativeLayout.setVisibility(View.INVISIBLE);
+        }
+
 
         viewDialogKristik = new ViewDialogKristik(this);
         mButton = findViewById(R.id.btnSimpanGenerate);
@@ -66,28 +80,18 @@ public class KristikMotifActivity extends AppCompatActivity {
             }
         });
 
+
+
         final Button buttongenerate = (Button) findViewById(R.id.btnKristik);
         buttongenerate.setOnClickListener(new View.OnClickListener() {
 
 
             public void onClick(View arg0) {
 
-                // TODO Auto-generated method stub
-                viewDialogKristik.showDialog();
+                Intent i = new Intent(getApplicationContext(), PilihKristikActivity.class);
+                startActivity(i);
 
-                Handler handler = null;
-                handler = new Handler();
-                handler.postDelayed(new Runnable(){
-                    public void run(){
-                        viewDialogKristik.hideDialog();
-                        relativeLayout.setVisibility(View.VISIBLE);
-                    }
-                }, 7000);
 
-                if(viewDialogKristik.checkDialog()){
-                    buttongenerate.setBackground(getDrawable(R.drawable.bgbtntask_disabled));;
-                    buttongenerate.setEnabled(false);
-                }
             }
         });
 
