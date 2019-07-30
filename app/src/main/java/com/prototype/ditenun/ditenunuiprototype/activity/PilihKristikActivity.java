@@ -9,15 +9,18 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.RelativeLayout;
-import android.widget.Toast;
+import android.widget.ImageView;
+import android.widget.RadioGroup;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
 import com.prototype.ditenun.ditenunuiprototype.R;
 import com.prototype.ditenun.ditenunuiprototype.Utility.ViewDialogKristik;
 
 public class PilihKristikActivity extends AppCompatActivity {
-    private RadioButton radioButton1,radioButton2, radioButton3, radioButton4, radioButton5, radioButton6;
+    private RadioGroup radioGroup1, radioGroup2;
     private Button kristik;
 
     ViewDialogKristik viewDialog;
@@ -35,36 +38,48 @@ public class PilihKristikActivity extends AppCompatActivity {
         mToolbar.setNavigationIcon(R.drawable.ic_action_back);mToolbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                IsFinish("Apakah Anda batal membuat kristik baru?");
+           IsFinish("Apakah Anda batal membuat kristik baru?");
             }
         });
 
-        radioButton1=findViewById(R.id.radioButton1);
-        radioButton2=findViewById(R.id.radioButton2);
-        radioButton3=findViewById(R.id.radioButton3);
-        radioButton4=findViewById(R.id.radioButton4);
-        radioButton5=findViewById(R.id.radioButton5);
-        radioButton6=findViewById(R.id.radioButton6);
+        ImageView imageView = (ImageView) findViewById(R.id.imageView4);
+        RequestOptions requestOptions = new RequestOptions();
+        requestOptions = requestOptions.transforms(new CenterCrop(), new RoundedCorners(16));
+        Glide.with(imageView.getContext())
+                .load(R.drawable.bintangmaratur)
+                .apply(requestOptions)
+                .into(imageView);
 
         final Button kristik = (Button) findViewById(R.id.btnKristik);
         kristik.setOnClickListener(new View.OnClickListener() {
 
 
             public void onClick(View arg0) {
+                radioGroup1 = (RadioGroup) findViewById(R.id.group1);
+                radioGroup2 = (RadioGroup) findViewById(R.id.group2);
 
+                int check1 =  radioGroup1.getCheckedRadioButtonId();
+                int check2 =  radioGroup2.getCheckedRadioButtonId();
+                if(check1 != -1 && check2 != -1){
+                    viewDialog.showDialog();
 
-                viewDialog.showDialog();
-
-                Handler handler = null;
-                handler = new Handler();
-                handler.postDelayed(new Runnable(){
-                    public void run(){
-                        viewDialog.hideDialog();
-                        Intent i = new Intent(getApplicationContext(), KristikMotifActivity.class);
-                        i.putExtra("kristik", "baru");
-                        startActivity(i);
-                    }
-                }, 3000);
+                    Handler handler = null;
+                    handler = new Handler();
+                    handler.postDelayed(new Runnable(){
+                        public void run(){
+                            viewDialog.hideDialog();
+                            Intent i = new Intent(getApplicationContext(), KristikMotifActivity.class);
+                            i.putExtra("kristik", "baru");
+                            startActivity(i);
+                        }
+                    }, 3000);
+                }else if(check1 == -1 && check2 == -1){
+                    RadioAlert("Pilih ukuran dan warna motif!");
+                }else if(check1 == -1){
+                    RadioAlert("Pilih ukuran motif!");
+                }else if(check2 == -1){
+                    RadioAlert("Pilih warna motif!");
+                }
             }
         });
     }
@@ -83,6 +98,23 @@ public class PilihKristikActivity extends AppCompatActivity {
                     }
                 });
         builder2.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
+
+        AlertDialog dialog = builder2.create();
+        dialog.show();
+
+    }
+
+    public void RadioAlert(String alertmessage) {
+
+        final AlertDialog.Builder builder2 = new AlertDialog.Builder(PilihKristikActivity.this);
+        builder2.setCancelable(true);
+        builder2.setMessage(alertmessage);
+        builder2.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
             }

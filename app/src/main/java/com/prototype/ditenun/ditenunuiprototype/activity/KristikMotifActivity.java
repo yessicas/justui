@@ -10,10 +10,15 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
 import com.prototype.ditenun.ditenunuiprototype.R;
 import com.prototype.ditenun.ditenunuiprototype.Utility.ViewDialogKristik;
 
@@ -33,6 +38,13 @@ public class KristikMotifActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_kristik_motif);
         relativeLayout = findViewById(R.id.resultgenerate);
+        ImageView imageView = (ImageView) findViewById(R.id.imageView4);
+        RequestOptions requestOptions = new RequestOptions();
+        requestOptions = requestOptions.transforms(new CenterCrop(), new RoundedCorners(16));
+        Glide.with(imageView.getContext())
+                .load(R.drawable.bintangmaratur)
+                .apply(requestOptions)
+                .into(imageView);
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mToolbar.setTitle("Kristik Motif");
         mToolbar.setNavigationIcon(R.drawable.ic_action_back);mToolbar.setOnClickListener(new View.OnClickListener() {

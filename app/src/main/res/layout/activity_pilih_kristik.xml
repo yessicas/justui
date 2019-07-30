@@ -87,6 +87,7 @@
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/group1"
             android:orientation="horizontal">
 
             <RadioButton
@@ -96,7 +97,6 @@
                 android:layout_marginLeft="10dp"
                 android:background="?android:selectableItemBackground"
                 android:text="Kecil"
-                android:checked="true"
                 android:textAlignment="textStart"
                 android:textSize="18sp" />
 
@@ -147,6 +147,7 @@
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/group2"
             android:orientation="horizontal">
 
             <RadioButton
@@ -157,7 +158,6 @@
                 android:background="?android:selectableItemBackground"
                 android:text="Sedikit"
                 android:textAlignment="textStart"
-                android:checked="true"
                 android:textSize="18sp" />
 
             <RadioButton

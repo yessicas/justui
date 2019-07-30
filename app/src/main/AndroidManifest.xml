@@ -49,10 +49,10 @@
             android:theme="@style/AppTheme2"/>
         <activity
             android:name=".activity.AboutActivity"
-            android:label="Tentang DiTenun" />
+            android:theme="@style/AppTheme2"/>
         <activity
             android:name=".activity.HelpActivity"
-            android:label="Bantuan" />
+            android:theme="@style/AppTheme2" />
         <activity
             android:name=".activity.CollectionActivity"
             android:label="Koleksi Motif"
@@ -65,16 +65,16 @@
             android:theme="@style/AppTheme2"/>
         <activity
             android:name=".activity.SejarahActivity"
-            android:label="Sejarah DiTenun" />
+            android:theme="@style/AppTheme2"/>
         <activity
             android:name=".activity.TentangActivity"
-            android:label="Apa itu DiTenun?" />
+            android:theme="@style/AppTheme2" />
         <activity
             android:name=".activity.ToGenerateActivity"
-            android:label="Bantuan" />
+            android:theme="@style/AppTheme2" />
         <activity
             android:name=".activity.ToKristikActivity"
-            android:label="Bantuan" />
+            android:theme="@style/AppTheme2" />
         <activity
             android:name=".activity.PilihMotifActivity"
             android:label="Pilih gambar"

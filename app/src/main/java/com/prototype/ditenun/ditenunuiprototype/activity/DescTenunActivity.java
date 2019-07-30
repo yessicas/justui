@@ -6,7 +6,13 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.FitCenter;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
 import com.prototype.ditenun.ditenunuiprototype.R;
 
 public class DescTenunActivity extends AppCompatActivity {
@@ -22,9 +28,18 @@ public class DescTenunActivity extends AppCompatActivity {
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
             }
         });
+
+        ImageView imageView = (ImageView) findViewById(R.id.imageView2);
+        RequestOptions requestOptions = new RequestOptions();
+        requestOptions = requestOptions.transforms(new CenterCrop(), new RoundedCorners(16));
+        Glide.with(imageView.getContext())
+                .load(R.drawable.bintangmaratur)
+                .apply(requestOptions)
+                .into(imageView);
 
             Button button1 = (Button) findViewById(R.id.button1);
             button1.setOnClickListener(new View.OnClickListener() {

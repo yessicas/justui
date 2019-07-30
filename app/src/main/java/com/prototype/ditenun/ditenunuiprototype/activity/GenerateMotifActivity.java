@@ -13,9 +13,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
 import com.prototype.ditenun.ditenunuiprototype.R;
 import com.prototype.ditenun.ditenunuiprototype.Utility.ViewDialogGenerate;
 
@@ -135,6 +140,15 @@ public class GenerateMotifActivity extends AppCompatActivity {
                 dialog.show();
             }
         });
+
+
+        ImageView imageView = (ImageView) findViewById(R.id.imageView4);
+        RequestOptions requestOptions = new RequestOptions();
+        requestOptions = requestOptions.transforms(new CenterCrop(), new RoundedCorners(16));
+        Glide.with(imageView.getContext())
+                .load(R.drawable.bintangmaratur)
+                .apply(requestOptions)
+                .into(imageView);
     }
 
     public void IsFinish(String alertmessage) {

@@ -6,8 +6,9 @@
 
     <item
         android:id="@+id/menu_close"
-        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:icon="@drawable/ic_action_cancel"
         android:title="close"
+        android:iconTint="@color/colorNavIcon"
         app:showAsAction="always" />
 
 </menu>

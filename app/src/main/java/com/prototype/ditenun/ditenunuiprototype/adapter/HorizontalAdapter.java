@@ -9,6 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
 import com.prototype.ditenun.ditenunuiprototype.R;
 import com.prototype.ditenun.ditenunuiprototype.activity.DescTenunActivity;
 import com.prototype.ditenun.ditenunuiprototype.activity.MoreActivity;
@@ -54,8 +58,14 @@ public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.My
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
+        RequestOptions requestOptions = new RequestOptions();
+        requestOptions = requestOptions.transforms(new CenterCrop(), new RoundedCorners(16));
+        Glide.with(holder.imageView.getContext())
+                .load(horizontalList.get(position).imageId)
+                .apply(requestOptions)
+                .into(holder.imageView);
 
-        holder.imageView.setImageResource(horizontalList.get(position).imageId);
+//        holder.imageView.setImageResource();
         holder.txtview.setText(horizontalList.get(position).nama);
 
         holder.imageView.setOnClickListener(new View.OnClickListener() {

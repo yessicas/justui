@@ -6,7 +6,10 @@ import android.view.Window;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.GlideDrawableImageViewTarget;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.request.target.DrawableImageViewTarget;
 import com.prototype.ditenun.ditenunuiprototype.R;
 
 
@@ -35,15 +38,14 @@ public class ViewDialogKristik {
         it was never easy to load gif into an ImageView before Glide or Others library
         and for doing this we need DrawableImageViewTarget to that ImageView
         */
-        GlideDrawableImageViewTarget imageViewTarget = new GlideDrawableImageViewTarget(gifImageView);
+        DrawableImageViewTarget imageViewTarget = new DrawableImageViewTarget(gifImageView);
 
         //...now load that gif which we put inside the drawble folder here with the help of Glide
 
         Glide.with(activity)
                 .load(R.drawable.custom_loading_image)
-                .placeholder(R.drawable.custom_loading_image)
-                .centerCrop()
-                .crossFade()
+                .transition(new DrawableTransitionOptions().crossFade())
+                .apply(new RequestOptions().placeholder(R.drawable.custom_loading_image).transform(new CenterCrop()))
                 .into(imageViewTarget);
 
         //...finaly show it

@@ -9,6 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
 import com.prototype.ditenun.ditenunuiprototype.R;
 import com.prototype.ditenun.ditenunuiprototype.activity.DescTenunActivity;
 import com.prototype.ditenun.ditenunuiprototype.model.UlosData;
@@ -34,7 +38,12 @@ public class UlosAdapter extends RecyclerView.Adapter<UlosViewHolder> {
 
     @Override
     public void onBindViewHolder(final UlosViewHolder holder, final int position) {
-        holder.mImage.setImageResource(mUlosList.get(position).getFlowerImage());
+        RequestOptions requestOptions = new RequestOptions();
+        requestOptions = requestOptions.transforms(new CenterCrop(), new RoundedCorners(16));
+        Glide.with(holder.mImage.getContext())
+                .load(mUlosList.get(position).getFlowerImage())
+                .apply(requestOptions)
+                .into(holder.mImage);
         holder.mTitle.setText(mUlosList.get(position).getFlowerName());
 
         holder.mImage.setOnClickListener(new View.OnClickListener() {

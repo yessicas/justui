@@ -7,4 +7,5 @@
     <color name="colorNavText">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="blue">#628EFD</color>
+    <color name="greydots">#757575</color>
 </resources>
