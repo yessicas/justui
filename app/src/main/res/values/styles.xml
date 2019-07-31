@@ -6,9 +6,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/courgette</item>
+        <item name="android:textColorPrimary">@android:color/holo_blue_light</item>
         <item name="actionOverflowButtonStyle">@style/MyActionButtonOverflow</item>
-
-
     </style>
 
     <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">

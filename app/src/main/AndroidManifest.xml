@@ -55,8 +55,8 @@
             android:theme="@style/AppTheme2" />
         <activity
             android:name=".activity.CollectionActivity"
-            android:label="Koleksi Motif"
-            android:theme="@style/CollectionTheme" />
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".activity.MoreActivity"
             android:label="Tenun Sumatera" />
@@ -79,6 +79,10 @@
             android:name=".activity.PilihMotifActivity"
             android:label="Pilih gambar"
             android:theme="@style/AppThemeBack" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

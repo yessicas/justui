@@ -50,6 +50,33 @@ public class PilihKristikActivity extends AppCompatActivity {
                 .apply(requestOptions)
                 .into(imageView);
 
+        final AlertDialog.Builder builder = new AlertDialog.Builder(PilihKristikActivity.this);
+        builder.setCancelable(true);
+        builder.setTitle("Simpan gambar?");
+        builder.setMessage("Gambar akan tersimpan di koleksi Anda");
+        builder.setPositiveButton("Simpan",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        viewDialog.showDialog();
+                        Handler handler = null;
+                        handler = new Handler();
+                        handler.postDelayed(new Runnable(){
+                            public void run(){
+                                viewDialog.hideDialog();
+                                Intent i = new Intent(getApplicationContext(), KristikMotifActivity.class);
+                                i.putExtra("kristik", "baru");
+                                startActivity(i);
+                            }
+                        }, 3000);
+                    }
+                });
+        builder.setNegativeButton("Batal", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
         final Button kristik = (Button) findViewById(R.id.btnKristik);
         kristik.setOnClickListener(new View.OnClickListener() {
 
@@ -61,18 +88,8 @@ public class PilihKristikActivity extends AppCompatActivity {
                 int check1 =  radioGroup1.getCheckedRadioButtonId();
                 int check2 =  radioGroup2.getCheckedRadioButtonId();
                 if(check1 != -1 && check2 != -1){
-                    viewDialog.showDialog();
-
-                    Handler handler = null;
-                    handler = new Handler();
-                    handler.postDelayed(new Runnable(){
-                        public void run(){
-                            viewDialog.hideDialog();
-                            Intent i = new Intent(getApplicationContext(), KristikMotifActivity.class);
-                            i.putExtra("kristik", "baru");
-                            startActivity(i);
-                        }
-                    }, 3000);
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
                 }else if(check1 == -1 && check2 == -1){
                     RadioAlert("Pilih ukuran dan warna motif!");
                 }else if(check1 == -1){
