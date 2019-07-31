@@ -3,8 +3,8 @@
     android:id="@+id/cardview"
     android:layout_marginTop="15dp"
     android:layout_marginBottom="5dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
+    android:layout_marginLeft="32dp"
+    android:layout_marginRight="32dp"
     android:layout_width="150dp"
     android:layout_height="wrap_content"
     android:background="@drawable/shape">
@@ -19,7 +19,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/bintangmaratur_potrait"
             android:layout_width="wrap_content"
-            android:layout_height="210dp" />
+            android:layout_height="210dp"/>
 
         <TextView
             android:id="@+id/tvTitle"
