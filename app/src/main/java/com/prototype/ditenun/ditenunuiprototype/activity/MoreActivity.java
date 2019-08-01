@@ -1,6 +1,8 @@
 package com.prototype.ditenun.ditenunuiprototype.activity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -8,9 +10,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.prototype.ditenun.ditenunuiprototype.R;
+import com.prototype.ditenun.ditenunuiprototype.Utility.CustomTypeFaceSpan;
 import com.prototype.ditenun.ditenunuiprototype.adapter.UlosAdapter;
 import com.prototype.ditenun.ditenunuiprototype.model.UlosData;
 
@@ -28,7 +36,7 @@ public class MoreActivity extends AppCompatActivity implements BottomNavigationV
         super.onCreate(savedInstanceState);
         Intent intent =  getIntent();
         String daerah = intent.getStringExtra("daerah");
-        getSupportActionBar().setTitle("Tenun " + daerah);
+//        getSupportActionBar().setTitle("Tenun " + daerah);
         setContentView(R.layout.activity_more);
 
         BottomNavigationView navigation = findViewById(R.id.navigation);
@@ -90,5 +98,38 @@ public class MoreActivity extends AppCompatActivity implements BottomNavigationV
             return true;
         }
         return false;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.optionmenu, menu);
+
+
+        for(int i = 0; i<menu.size(); i++){
+            MenuItem item = menu.getItem(i);
+            applyFontToMenuItem(item, Typeface.DEFAULT);
+            SpannableString s = new SpannableString(item.getTitle());
+            s.setSpan(new ForegroundColorSpan(Color.BLACK), 0, s.length(), 0);
+            item.setTitle(s);
+        }
+        return true;
+    }
+
+    private void applyFontToMenuItem(MenuItem mi, Typeface font) {
+        SpannableString mNewTitle = new SpannableString(mi.getTitle());
+        mNewTitle.setSpan(new CustomTypeFaceSpan("", font), 0, mNewTitle.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        mi.setTitle(mNewTitle);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId()==R.id.menu_tentang){
+            startActivity(new Intent(this, AboutActivity.class));
+            return true;
+        } else if (item.getItemId() == R.id.menu_bantuan) {
+            startActivity(new Intent(this, HelpActivity.class));
+            return true;
+        }
+        return true;
     }
 }

@@ -86,8 +86,18 @@ public class KristikMotifActivity extends AppCompatActivity {
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Intent i = new Intent(getApplicationContext(), CollectionActivity.class);
-                        startActivity(i);
+
+                        viewDialogKristik.showDialogSave();
+                        Handler handler = null;
+                        handler = new Handler();
+                        handler.postDelayed(new Runnable(){
+                            public void run(){
+                                viewDialogKristik.hideDialog();
+                                Intent i = new Intent(getApplicationContext(), CollectionActivity.class);
+                                startActivity(i);
+                            }
+                        }, 3000);
+
                     }
                 });
         builder.setNegativeButton("Batal", new DialogInterface.OnClickListener() {

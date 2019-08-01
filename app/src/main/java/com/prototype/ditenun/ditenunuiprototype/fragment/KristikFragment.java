@@ -31,7 +31,7 @@ public class KristikFragment extends Fragment {
                 View mView = getLayoutInflater().inflate(R.layout.dialog_layout_kristik, null);
 
                 PhotoView photoView = mView.findViewById(R.id.dialog_kristik);
-                photoView.setImageResource(R.drawable.kristikbintangmaratur);
+                photoView.setImageResource(R.drawable.kristik1);
                 mBuilder.setView(mView);
                 AlertDialog mDialog = mBuilder.create();
                 mDialog.show();

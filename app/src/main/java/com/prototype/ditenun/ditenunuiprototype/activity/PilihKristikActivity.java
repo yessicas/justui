@@ -52,9 +52,8 @@ public class PilihKristikActivity extends AppCompatActivity {
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(PilihKristikActivity.this);
         builder.setCancelable(true);
-        builder.setTitle("Simpan gambar?");
-        builder.setMessage("Gambar akan tersimpan di koleksi Anda");
-        builder.setPositiveButton("Simpan",
+        builder.setMessage("Hasilkan kristik motif?");
+        builder.setPositiveButton("Ya",
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -71,7 +70,7 @@ public class PilihKristikActivity extends AppCompatActivity {
                         }, 3000);
                     }
                 });
-        builder.setNegativeButton("Batal", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
             }

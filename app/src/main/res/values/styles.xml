@@ -16,8 +16,26 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
 
+    <style name="AppTheme3" parent="Base.Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
 
+    <style name="AppTheme4" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@android:color/holo_blue_light</item>
+        <item name="actionOverflowButtonStyle">@style/MyActionButtonOverflow</item>
+    </style>
+
+    <style name="Courgette">
+        <item name="android:fontFamily">@font/courgette</item>
     </style>
 
 
@@ -38,9 +56,14 @@
     <!-- Style to replace actionbar overflow icon. set item 'android:actionOverflowButtonStyle' in AppTheme -->
     <style name="MyActionButtonOverflow" parent="@style/Widget.AppCompat.ActionButton.Overflow">
         <item name="android:tint">@color/greydots</item>
-        <item name="android:background">?android:attr/actionBarItemBackground</item>
+        <item name="android:background">@color/greytenun</item>
         <item name="android:contentDescription">"Lala"</item>
     </style>
+
+    <style name="PopupMenuStyle" parent="Theme.AppCompat.Light">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
 
     <style name="AppTheme.PopMe">
         <item name="android:windowIsTranslucent">true</item>

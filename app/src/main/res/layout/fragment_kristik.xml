@@ -9,11 +9,9 @@
         android:id="@+id/imageKristik"
         android:layout_width="130dp"
         android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:src="@drawable/kristikbintangmaratur"
+        android:src="@drawable/kristik1"
         android:background="@drawable/image_border"
         tools:scaleType="fitCenter" />
 

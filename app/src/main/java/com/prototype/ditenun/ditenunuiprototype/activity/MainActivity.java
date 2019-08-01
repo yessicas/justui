@@ -1,12 +1,17 @@
 package com.prototype.ditenun.ditenunuiprototype.activity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -14,6 +19,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.prototype.ditenun.ditenunuiprototype.R;
+import com.prototype.ditenun.ditenunuiprototype.Utility.CustomTypeFaceSpan;
 import com.prototype.ditenun.ditenunuiprototype.fragment.HomeFragment;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -67,7 +73,21 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.optionmenu, menu);
 
+
+        for(int i = 0; i<menu.size(); i++){
+            MenuItem item = menu.getItem(i);
+            applyFontToMenuItem(item, Typeface.DEFAULT);
+            SpannableString s = new SpannableString(item.getTitle());
+            s.setSpan(new ForegroundColorSpan(Color.BLACK), 0, s.length(), 0);
+            item.setTitle(s);
+        }
         return true;
+    }
+
+    private void applyFontToMenuItem(MenuItem mi, Typeface font) {
+        SpannableString mNewTitle = new SpannableString(mi.getTitle());
+        mNewTitle.setSpan(new CustomTypeFaceSpan("", font), 0, mNewTitle.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        mi.setTitle(mNewTitle);
     }
 
     @Override
