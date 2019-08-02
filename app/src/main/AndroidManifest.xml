@@ -79,7 +79,7 @@
             android:theme="@style/AppTheme2" />
         <activity
             android:name=".activity.PilihMotifActivity"
-            android:label="Pilih gambar"
+            android:label="Tambahkan gambar"
             android:theme="@style/AppThemeBack" />
 
         <meta-data

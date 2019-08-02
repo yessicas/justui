@@ -32,7 +32,7 @@ public class GenerateFragment extends Fragment {
                 View mView = getLayoutInflater().inflate(R.layout.dialog_layout_generate, null);
 
                 PhotoView photoView = mView.findViewById(R.id.dialog_generate);
-                photoView.setImageResource(R.drawable.generatebintangmaratur);
+                photoView.setImageResource(R.drawable.generate1);
                 mBuilder.setView(mView);
                 AlertDialog mDialog = mBuilder.create();
                 mDialog.show();

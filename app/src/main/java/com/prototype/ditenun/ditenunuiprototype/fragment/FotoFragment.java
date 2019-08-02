@@ -31,10 +31,11 @@ public class FotoFragment extends Fragment {
 
                 View mView = getLayoutInflater().inflate(R.layout.dialog_layout_foto, null);
 
-                PhotoView photoView = mView.findViewById(R.id.dialog_foto);
-                photoView.setImageResource(R.drawable.sadum);
                 mBuilder.setView(mView);
+                PhotoView photoView = mView.findViewById(R.id.dialog_foto);
+                photoView.setImageResource(R.drawable.gambar2);
                 AlertDialog mDialog = mBuilder.create();
+                mDialog.setCanceledOnTouchOutside(true);
                 mDialog.show();
             }
         });
