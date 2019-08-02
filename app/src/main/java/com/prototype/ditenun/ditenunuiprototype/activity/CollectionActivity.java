@@ -21,6 +21,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.prototype.ditenun.ditenunuiprototype.R;
 import com.prototype.ditenun.ditenunuiprototype.adapter.Pager;
@@ -45,6 +46,11 @@ public class CollectionActivity extends AppCompatActivity implements TabLayout.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_collection);
+        Intent intent = getIntent();
+
+        if(intent.hasExtra("save")){
+            Toast.makeText(CollectionActivity.this, "Gambar telah tersimpan", Toast.LENGTH_SHORT).show();
+        }
 
         //Adding toolbar to the activity
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);

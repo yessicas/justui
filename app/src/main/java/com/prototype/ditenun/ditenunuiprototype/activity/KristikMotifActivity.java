@@ -94,6 +94,7 @@ public class KristikMotifActivity extends AppCompatActivity {
                             public void run(){
                                 viewDialogKristik.hideDialog();
                                 Intent i = new Intent(getApplicationContext(), CollectionActivity.class);
+                                i.putExtra("save","tersimpan");
                                 startActivity(i);
                             }
                         }, 3000);
